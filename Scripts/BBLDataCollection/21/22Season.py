@@ -1,17 +1,20 @@
 import json
 import pandas as pd
 import glob
+import os
 
-files = glob.glob(r"D:\UniWork\SP52025\MathCom\2025-BBL-Championship-Predictor\Data\RawData\21-22\*.json")
+files = glob.glob(r"D:\UniWork\SP52025\MathCom\2025-BBL-Championship-Predictor\Data\RawData\bbl_json\*.json")
 
 records = []
 
-for file in files:
+for idx, file in enumerate(files, start=1):
     with open(file, "r") as f:
         data = json.load(f) # Load the JSON file
         info = data["info"]
 
         record = {
+            "id_num":idx,                               # To increment the id automatically
+            "id_file": os.path.basename(file).replace(".json",""), # file-based id
             "date":info["dates"][0],                    # Date
             "venue":info.get("venue"),                  # Venue
             "team1": info["teams"][0],                  # Home Team
