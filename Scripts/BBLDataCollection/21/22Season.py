@@ -28,4 +28,4 @@ for idx, file in enumerate(files, start=1):
 
 df = pd.DataFrame(records)
 df.to_csv("BBLDataCollection.csv", index=False)
-print(df.head())
+print(df.head()) # To test the code
