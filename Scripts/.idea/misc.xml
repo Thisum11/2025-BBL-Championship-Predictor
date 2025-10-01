@@ -3,8 +3,5 @@
   <component name="Black">
     <option name="sdkName" value="Python 3.11 (PythonSnippets)" />
   </component>
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="c3ddcb9a-36d3-496d-b03b-2ba10768b43f" />
-  </component>
   <component name="ProjectRootManager" version="2" project-jdk-name="Python 3.11 (BBLDataCollection)" project-jdk-type="Python SDK" />
 </project>
